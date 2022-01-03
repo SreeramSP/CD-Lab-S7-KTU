@@ -1,0 +1,42 @@
+//Operator Precedence Grammer
+//Sreeram S P
+
+#include<stdio.h>
+#include<string.h>
+int k=0,z=0,i=0,j=0,length=0;
+char input[16];
+char ac[20];
+char stack[15];
+char action[10];
+char precedence_table[][4]={" >>>","<><>","<>>>","<<< "};
+char symbol[4]={"i+*$"};
+
+
+void main(){
+  printf("GRAMMER: \n E->E+E \n E->E*E \n E->id");   //Predefined input grammer
+  printf("\nEnter the string=");  //Taking the string input
+  scanf("%s",input);
+  length=strlen(input);     //Finding the length of the input string
+  strcpy(act,"SHIFT");
+  printf("Stack\t Input \t Action");
+
+  for(k=0,i=0;j<length;k++,i++,j++){
+    if(input[j]=='i' && a[j+1]=='d'){
+      stack[i]=input[j];
+      stack[i+1]=input[j+1];
+      stack[i+2]='\0';
+      input[j]=' ';
+      input[j+1]=' ';
+      printf("\n$%s\t%s$\t%s",stack,input,action);
+    }
+    else{
+      stack[i]=input[j];
+      stack[i+1]='\0';
+      input[j]=' ';
+      printf("\n$%s\t%s$\t%s",stack,input,action);
+      check();
+
+    }
+}
+    
+}
